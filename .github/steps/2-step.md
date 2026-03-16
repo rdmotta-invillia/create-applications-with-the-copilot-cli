@@ -1,50 +1,50 @@
-## Step 2: Work on the Calculator Issue with Copilot CLI
+## Passo 2: Trabalhar na Issue da Calculadora com o Copilot CLI
 
-With the issue created, Duck works with the standalone Copilot CLI interactively to start building the calculator application.
+Com a issue criada, Joãozinho trabalha com o Copilot CLI standalone de forma interativa para começar a construir a aplicação calculadora.
 
-### 📖 Theory: Collaborative Development with Copilot CLI
+### 📖 Teoria: Desenvolvimento Colaborativo com o Copilot CLI
 
-#### Interactive Development with Copilot CLI
+#### Desenvolvimento Interativo com o Copilot CLI
 
-The standalone Copilot CLI (`copilot` command) provides a rich interactive experience for development:
+O Copilot CLI standalone (comando `copilot`) oferece uma experiência interativa rica para desenvolvimento:
 
-- Start a session by simply running `copilot` in your terminal
-- Have natural conversations about your code and get intelligent suggestions
-- Generate boilerplate code based on your requirements
-- Use the latest AI models for cutting-edge responses
-- `/share [file|gist] [path]` - Share session to markdown file or GitHub gist
+- Inicie uma sessão simplesmente executando `copilot` no seu terminal
+- Tenha conversas naturais sobre seu código e obtenha sugestões inteligentes
+- Gere código boilerplate com base nos seus requisitos
+- Use os modelos de IA mais recentes para respostas de ponta
+- `/share [file|gist] [path]` - Compartilhe a sessão em arquivo markdown ou GitHub gist
 
 #### Custom Agents
 
-Copilot CLI supports custom agents that you can define in your repository:
+O Copilot CLI suporta custom agents que você pode definir no seu repositório:
 
-- Create agent profiles in `.github/agents/` directory
-- Encode specialized prompts, tool selections, and workflows
-- Invoke agents using `/agent <name>` command
-- Great for documentation, infrastructure, security, or domain-specific tasks
+- Crie perfis de agentes no diretório `.github/agents/`
+- Codifique prompts especializados, seleções de ferramentas e fluxos de trabalho
+- Invoque agentes usando o comando `/agent <name>`
+- Ótimo para documentação, infraestrutura, segurança ou tarefas específicas de domínio
 
-#### Delegating Tasks
+#### Delegando Tarefas
 
-When you have larger tasks, you can delegate them to Copilot coding agent:
+Quando você tem tarefas maiores, pode delegá-las ao Copilot coding agent:
 
-- Use `/delegate TASK-DESCRIPTION` to assign work
-- Copilot creates a new branch and draft pull request
-- The coding agent works autonomously in the background
-- Review the changes when complete
+- Use `/delegate TASK-DESCRIPTION` para atribuir trabalho
+- O Copilot cria uma nova branch e um draft pull request
+- O coding agent trabalha de forma autônoma em segundo plano
+- Revise as alterações quando estiverem completas
 
 > [!NOTE]
-> References:
+> Referências:
 >
 > - [Using GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli)
 > - [Custom agents in Copilot CLI](https://github.blog/changelog/2025-10-28-github-copilot-cli-use-custom-agents-and-delegate-to-copilot-coding-agent/)
 > - [About custom agents](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents)
 
 > [!IMPORTANT]
-> If you have restarted your codespace you may need to run `copilot --allow-all --enable-all-github-mcp-tools` and then authenticate with GitHub again by running `!gh auth login` in the Copilot CLI.
+> Se você reiniciou seu codespace, pode ser necessário executar `copilot --allow-all --enable-all-github-mcp-tools` e depois autenticar com o GitHub novamente executando `!gh auth login` no Copilot CLI.
 
-### ⌨️ Activity: Create a New Branch for the Calculator App
+### ⌨️ Atividade: Criar uma Nova Branch para a Aplicação Calculadora
 
-1. Start a new interactive Copilot CLI session (close the previous session with `/exit`):
+1. Inicie uma nova sessão interativa do Copilot CLI (feche a sessão anterior com `/exit`):
 
    > ![Static Badge](https://img.shields.io/badge/Terminal-text?logo=gnometerminal&labelColor=0969da&color=ddf4ff)
    >
@@ -53,12 +53,12 @@ When you have larger tasks, you can delegate them to Copilot coding agent:
    > ```
 
 > [!NOTE]
-> The `--allow-all` option in the Copilot CLI enables all permissions at once:
-> it is equivalent to `--allow-all-tools`, `--allow-all-paths`, and `--allow-all-urls`.
-> This allows the CLI to access any file path, use any tool, and access any URL without prompting for confirmation.
-> Use with caution, as it grants the CLI full access and automation capabilities.
+> A opção `--allow-all` no Copilot CLI habilita todas as permissões de uma vez:
+> é equivalente a `--allow-all-tools`, `--allow-all-paths` e `--allow-all-urls`.
+> Isso permite que o CLI acesse qualquer caminho de arquivo, use qualquer ferramenta e acesse qualquer URL sem pedir confirmação.
+> Use com cautela, pois concede ao CLI acesso total e capacidades de automação.
 
-2. Create and push a new branch called `create-calc-app`:
+2. Crie e faça push de uma nova branch chamada `create-calc-app`:
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -67,24 +67,24 @@ When you have larger tasks, you can delegate them to Copilot coding agent:
    > ```
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Está com problemas? 🤷</summary><br/>
 
-Use the `!` command in Copilot CLI to execute shell commands directly from your chat session. For example, to create and push the branch without leaving chat:
+Use o comando `!` no Copilot CLI para executar comandos shell diretamente da sua sessão de chat. Por exemplo, para criar e fazer push da branch sem sair do chat:
 
  ```prompt
  !git checkout -b create-calc-app && git push -u origin create-calc-app
  ```
 
- Verify the current branch afterward:
+ Verifique a branch atual depois:
 
  ```prompt
  !git branch --show-current
  ```
 </details>
 
-### ⌨️ Activity: Generate Calculator Code with Copilot CLI based on an Image
+### ⌨️ Atividade: Gerar Código da Calculadora com o Copilot CLI Baseado em uma Imagem
 
-1. Ask Copilot CLI to help you create the calculator functions based on the image and the GitHub issue created earlier:
+1. Peça ao Copilot CLI para ajudá-lo a criar as funções da calculadora com base na imagem e na issue do GitHub criada anteriormente:
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -96,7 +96,7 @@ Use the `!` command in Copilot CLI to execute shell commands directly from your 
    > Make sure the calculator is commented with the operations it supports.
    > ```
 
-   1. Optional alternatively, use the headless mode with a prompt:
+   1. Opcionalmente, use o modo headless com um prompt:
 
       > ![Static Badge](https://img.shields.io/badge/Terminal-text?logo=gnometerminal&labelColor=0969da&color=ddf4ff)
       >
@@ -109,9 +109,9 @@ Use the `!` command in Copilot CLI to execute shell commands directly from your 
       > ```
 
 > [!NOTE]
-> While this example uses an image of a web JavaScript calculator, it demonstrates how you can use files (including images) with the Copilot CLI to provide context for your requests.
+> Embora este exemplo use uma imagem de uma calculadora JavaScript web, ele demonstra como você pode usar arquivos (incluindo imagens) com o Copilot CLI para fornecer contexto para suas solicitações.
 
-2. Run and test your calculator functions by asking Copilot CLI:
+2. Execute e teste as funções da sua calculadora pedindo ao Copilot CLI:
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -120,7 +120,7 @@ Use the `!` command in Copilot CLI to execute shell commands directly from your 
    > shown in the image @images/calc-basic-operations.png.
    > ```
 
-3. Ask Copilot CLI to create comprehensive tests for the calculator functions:
+3. Peça ao Copilot CLI para criar testes abrangentes para as funções da calculadora:
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -136,9 +136,9 @@ Use the `!` command in Copilot CLI to execute shell commands directly from your 
    > ```
 
 > [!NOTE]
-> Hit ctrl+o to see output of the passed tests that Copilot CLI ran for you!
+> Pressione ctrl+o para ver a saída dos testes aprovados que o Copilot CLI executou para você!
   
-4. Once satisfied with the code, commit your changes through Copilot CLI:
+4. Quando estiver satisfeito com o código, faça commit das suas alterações pelo Copilot CLI:
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -149,21 +149,21 @@ Use the `!` command in Copilot CLI to execute shell commands directly from your 
    > Push the changes
    > ```
 
-5. Wait a moment for Mona to check your work, provide feedback, and share the next lesson.
+5. Aguarde um momento para Mona verificar seu trabalho, fornecer feedback e compartilhar a próxima lição.
 
 > [!TIP]
-> You can paste or drag-and-drop images into Copilot CLI to provide visual context for your questions!
+> Você pode colar ou arrastar e soltar imagens no Copilot CLI para fornecer contexto visual para suas perguntas!
 
 > [!NOTE]
-> Pushing your changes will trigger the workflow to verify your work and prepare the next step!
+> Fazer push das suas alterações acionará o workflow para verificar seu trabalho e preparar o próximo passo!
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Está com problemas? 🤷</summary><br/>
 
-- Make sure you're in the repository directory when running commands
-- The `copilot` command requires Node.js 22+ to be installed
-- If authentication fails, run `copilot` and follow the login prompts
-- You can also edit the calculator.js file manually based on Copilot's suggestions
-- Remember to export your functions using `module.exports`
+- Certifique-se de estar no diretório do repositório ao executar comandos
+- O comando `copilot` requer Node.js 22+ instalado
+- Se a autenticação falhar, execute `copilot` e siga os prompts de login
+- Você também pode editar o arquivo calculator.js manualmente com base nas sugestões do Copilot
+- Lembre-se de exportar suas funções usando `module.exports`
 
 </details>

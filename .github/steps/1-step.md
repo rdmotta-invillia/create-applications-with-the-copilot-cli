@@ -1,97 +1,97 @@
-## Step 1: Install Copilot CLI and Use the Issue Template
+## Passo 1: Instalar o Copilot CLI e Usar o Issue Template
 
-Duck prefers working in the terminal and wants to use AI from there.
-Duck is getting ready to develop a new Node.js CLI calculator app and plans to install the standalone Copilot CLI to build the application from the terminal.
+Joãozinho prefere trabalhar no terminal e quer usar IA de lá.
+Joãozinho está se preparando para desenvolver uma nova aplicação calculadora CLI em Node.js e planeja instalar o Copilot CLI standalone para construir a aplicação pelo terminal.
 
-### 📖 Theory: GitHub Copilot CLI - A Standalone Terminal Application
+### 📖 Teoria: GitHub Copilot CLI - Uma Aplicação Standalone de Terminal
 
-#### What is GitHub Copilot CLI?
+#### O que é o GitHub Copilot CLI?
 
-GitHub Copilot CLI is a **standalone terminal application** that brings the power of GitHub Copilot directly to your command line. It is installed via npm and provides a rich interactive experience for developers.
+O GitHub Copilot CLI é uma **aplicação standalone de terminal** que traz o poder do GitHub Copilot diretamente para sua linha de comando. É instalado via npm e oferece uma experiência interativa rica para desenvolvedores.
 
 <img width="60%" height="60%" alt="CopilotCLI" src="../images/copilot-cli.png" />
 
-#### Key capabilities and options to be aware of include:
+#### Principais capacidades e opções a serem observadas incluem:
 
-- Providing intelligent command suggestions powered by the latest AI models from OpenAI and Google
-- Generating code snippets and scripts directly in your terminal
-- Assisting with Git operations and GitHub interactions
-- Supporting image inputs via paste and drag-and-drop for visual context
-- The `--enable-all-github-mcp-tools` flag enables all GitHub MCP (Model Context Protocol) tools, giving Copilot CLI access to GitHub features like creating issues, managing repositories, and more.
-- Depending on your Copilot CLI configuration (for example, if you don't use the `--allow-all` option), you may be prompted to enable certain features during the session. Respond **yes** to these prompts as well.
-- `/session`: Shows details about your current chat session.
-- `/context`: Provides a visual overview of your current token usage
-- `/usage`: Lets you view your session statistics, including:
-  - The amount of premium requests used in the current session
-  - The session duration
-  - The total lines of code edited
-  - A breakdown of token usage per model
-- `/share [file|gist] [path]` - Share session to markdown file or GitHub gist
-- Creating **custom agents** to encode specialized prompts and workflows
-- Delegating tasks to **Copilot coding agent** using the `/delegate` command
+- Fornecer sugestões inteligentes de comandos alimentadas pelos modelos de IA mais recentes da OpenAI e Google
+- Gerar trechos de código e scripts diretamente no seu terminal
+- Auxiliar com operações Git e interações com o GitHub
+- Suportar entrada de imagens via colar e arrastar e soltar para contexto visual
+- A flag `--enable-all-github-mcp-tools` habilita todas as ferramentas GitHub MCP (Model Context Protocol), dando ao Copilot CLI acesso a recursos do GitHub como criar issues, gerenciar repositórios e mais.
+- Dependendo da sua configuração do Copilot CLI (por exemplo, se você não usar a opção `--allow-all`), você pode ser solicitado a habilitar certos recursos durante a sessão. Responda **yes** a esses prompts também.
+- `/session`: Mostra detalhes sobre sua sessão de chat atual.
+- `/context`: Fornece uma visão geral visual do uso de tokens atual
+- `/usage`: Permite visualizar as estatísticas da sua sessão, incluindo:
+  - A quantidade de premium requests usadas na sessão atual
+  - A duração da sessão
+  - O total de linhas de código editadas
+  - Uma divisão do uso de tokens por modelo
+- `/share [file|gist] [path]` - Compartilha a sessão em arquivo markdown ou GitHub gist
+- Criar **custom agents** para codificar prompts e fluxos de trabalho especializados
+- Delegar tarefas ao **Copilot coding agent** usando o comando `/delegate`
 
-#### Global shortcuts
+#### Atalhos globais
 
 ```text
- @             mention files, include contents in context
- Esc           cancel the current operation
- !             execute command in your local shell (bypass Copilot)
- ctrl+c        cancel operation / clear input / exit
- ctrl+d        shutdown
- ctrl+l        clear the screen
- shift+tab     switch between plan mode and regular interactive mode
+ @             mencionar arquivos, incluir conteúdo no contexto
+ Esc           cancelar a operação atual
+ !             executar comando no seu shell local (ignorar o Copilot)
+ ctrl+c        cancelar operação / limpar entrada / sair
+ ctrl+d        encerrar
+ ctrl+l        limpar a tela
+ shift+tab     alternar entre modo plan e modo interativo regular
 ```
 
-#### Installation Requirements
+#### Requisitos de Instalação
 
-To install Copilot CLI, you need:
+Para instalar o Copilot CLI, você precisa de:
 
-- Node.js version 22 or later
-- npm version 10 or later
-- An active GitHub Copilot subscription (Pro, Pro+, Business, or Enterprise)
+- Node.js versão 22 ou posterior
+- npm versão 10 ou posterior
+- Uma assinatura ativa do GitHub Copilot (Pro, Pro+, Business ou Enterprise)
 
 #### Issue Templates
 
-Issue templates help maintain consistency when team members create issues. This repository already has a `feature_request.md` template that you'll use to create your calculator app issue. Templates ensure:
+Issue templates ajudam a manter a consistência quando membros da equipe criam issues. Este repositório já possui um template `feature_request.md` que você usará para criar a issue da sua aplicação calculadora. Templates garantem:
 
-- All necessary information is captured upfront
-- Issues follow a standard format
-- The team can triage and respond to issues more efficiently
+- Todas as informações necessárias são capturadas desde o início
+- Issues seguem um formato padrão
+- A equipe pode fazer triagem e responder às issues de forma mais eficiente
 
-#### References
+#### Referências
 
 - [Installing GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli)
 - [Using GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli)
 - [GitHub Copilot CLI 101](https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/)
 
 > [!IMPORTANT]
-> If you have restarted your codespace you may need to run `copilot --allow-all` and then authenticate with GitHub again by running `!gh auth login` in your terminal,
-> or use `!gh auth login` from within the Copilot CLI session.
+> Se você reiniciou seu codespace, pode ser necessário executar `copilot --allow-all` e depois autenticar com o GitHub novamente executando `!gh auth login` no seu terminal,
+> ou usar `!gh auth login` de dentro da sessão do Copilot CLI.
 
-### :keyboard: Activity 1: Getting to know your development environment
+### :keyboard: Atividade 1: Conhecendo seu ambiente de desenvolvimento
 
-1. Right-click the below button to open the **Create Codespace** page in a new tab.
+1. Clique com o botão direito no botão abaixo para abrir a página **Create Codespace** em uma nova aba.
 
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
-   - The free tier of Codespaces that comes with all GitHub accounts is fine, assuming you still have minutes available.
-   - The default Codespace settings are fine.
+   - O plano gratuito de Codespaces que vem com todas as contas GitHub é suficiente, assumindo que você ainda tem minutos disponíveis.
+   - As configurações padrão do Codespace são suficientes.
 
 > [!IMPORTANT]
-> This Codespace VS Code environment has been simplified to focus on using the Copilot CLI in the terminal. You'll primarily be working with terminal commands rather than the full VS Code feature set.
+> Este ambiente VS Code do Codespace foi simplificado para focar no uso do Copilot CLI no terminal. Você trabalhará principalmente com comandos de terminal em vez do conjunto completo de recursos do VS Code.
 
-1. Confirm the **Repository** field is your copy of the exercise, not the original, then click the green **Create Codespace** button.
-   - ✅ Your copy: `/{{full_repo_name}}`
+1. Confirme que o campo **Repository** é a sua cópia do exercício, não o original, e clique no botão verde **Create Codespace**.
+   - ✅ Sua cópia: `/{{full_repo_name}}`
    - ❌ Original: `/arilivigni/create-applications-with-the-copilot-CLI`
 
-1. Wait a moment for Visual Studio Code to load.
+1. Aguarde um momento para o Visual Studio Code carregar.
 
-1. We will be focused on the full terminal window since this is all about the CLI.
+1. Vamos focar na janela completa do terminal, já que este exercício é todo sobre o CLI.
 
-### ⌨️ Activity 2: Install the Standalone Copilot CLI
+### ⌨️ Atividade 2: Instalar o Copilot CLI Standalone
 
-1. Open your Codespace (if not already open)
+1. Abra seu Codespace (se ainda não estiver aberto)
 
-1. Install the standalone GitHub Copilot CLI by running in the terminal window:
+1. Instale o GitHub Copilot CLI standalone executando na janela do terminal:
 
    > ![Static Badge](https://img.shields.io/badge/Terminal-text?logo=gnometerminal&labelColor=0969da&color=ddf4ff)
 
@@ -99,7 +99,7 @@ Issue templates help maintain consistency when team members create issues. This 
    > npm install -g @github/copilot
    > ```
 
-1. Verify the installation by running:
+1. Verifique a instalação executando:
 
    > ![Static Badge](https://img.shields.io/badge/Terminal-text?logo=gnometerminal&labelColor=0969da&color=ddf4ff)
 
@@ -108,11 +108,11 @@ Issue templates help maintain consistency when team members create issues. This 
    > ```
 
 > [!TIP]
-> After installation, you can use the `copilot` command anywhere in your terminal to start an interactive session!
+> Após a instalação, você pode usar o comando `copilot` em qualquer lugar no seu terminal para iniciar uma sessão interativa!
 
-### ⌨️ Activity 3: Create an Issue Using Copilot CLI
+### ⌨️ Atividade 3: Criar uma Issue Usando o Copilot CLI
 
-1. Start an interactive Copilot CLI session:
+1. Inicie uma sessão interativa do Copilot CLI:
 
    > ![Static Badge](https://img.shields.io/badge/Terminal-text?logo=gnometerminal&labelColor=0969da&color=ddf4ff)
    >
@@ -121,14 +121,14 @@ Issue templates help maintain consistency when team members create issues. This 
    > ```
 
 > [!NOTE]
-> When starting Copilot CLI, you may be prompted to add this folder to the trusted folder list and to key bindings. Respond **yes** to both prompts to continue.
+> Ao iniciar o Copilot CLI, você pode ser solicitado a adicionar esta pasta à lista de pastas confiáveis e às key bindings. Responda **yes** a ambos os prompts para continuar.
 
 <img width="60%" height="60%" alt="CopilotCLIAddDir" src="../images/copilot-cli-add-directory.png" />
 <br />
 <img width="60%" height="60%" alt="CopilotCLITerminalBindings" src="../images/copilot-cli-terminal-bindings.png" />
 
 
-2. Authorize with GitHub (if not already authenticated) in the Copilot CLI:
+2. Autorize com o GitHub (se ainda não estiver autenticado) no Copilot CLI:
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -137,10 +137,10 @@ Issue templates help maintain consistency when team members create issues. This 
    > ```
 
 > [!NOTE]
-> After running `!gh auth login`, you will be provided with a link and an authentication code. Click the link to open GitHub in your browser, then enter the code to complete the authentication process.
+> Após executar `!gh auth login`, você receberá um link e um código de autenticação. Clique no link para abrir o GitHub no seu navegador e insira o código para concluir o processo de autenticação.
 
-3. Explore useful slash commands in Copilot CLI:
-   - View your current session information:
+3. Explore comandos slash úteis no Copilot CLI:
+   - Visualize as informações da sua sessão atual:
 
      > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
      >
@@ -148,7 +148,7 @@ Issue templates help maintain consistency when team members create issues. This 
      > /session
      > ```
 
-   - View your current context information:
+   - Visualize as informações de contexto atual:
 
      > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
      >
@@ -156,7 +156,7 @@ Issue templates help maintain consistency when team members create issues. This 
      > /context
      > ```
 
-   - View your current usage information:
+   - Visualize as informações de uso atual:
 
      > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
      >
@@ -166,15 +166,15 @@ Issue templates help maintain consistency when team members create issues. This 
 
 > [!NOTE]
 >
-> - `/session`: Command shows details about your current chat session.
-> - `/context`: Provides a visual overview of your current token usage
-> - `/usage`: Lets you view your session statistics, including:
->   - The amount of premium requests used in the current session
->   - The session duration
->   - The total lines of code edited
->   - A breakdown of token usage per model
+> - `/session`: Comando que mostra detalhes sobre sua sessão de chat atual.
+> - `/context`: Fornece uma visão geral visual do uso de tokens atual
+> - `/usage`: Permite visualizar as estatísticas da sua sessão, incluindo:
+>   - A quantidade de premium requests usadas na sessão atual
+>   - A duração da sessão
+>   - O total de linhas de código editadas
+>   - Uma divisão do uso de tokens por modelo
 
-4. Ask Copilot CLI to help you create a feature request issue for the calculator app:
+4. Peça ao Copilot CLI para ajudá-lo a criar uma issue de feature request para a aplicação calculadora:
 
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
@@ -194,10 +194,10 @@ Issue templates help maintain consistency when team members create issues. This 
    > List the issue link when complete
    > ```
 
-5. Mona should already be busy checking your work. Give her a moment and keep watch in the comments. You will see her respond with progress info and the next lesson.
+5. Mona já deve estar verificando seu trabalho. Dê um momento a ela e fique de olho nos comentários. Você verá ela responder com informações de progresso e a próxima lição.
 
 > [!NOTE]
-> Copilot CLI may ask to confirm creating the issue and using `gh issue` and `git config`.
+> O Copilot CLI pode pedir para confirmar a criação da issue e o uso de `gh issue` e `git config`.
 > Respond **yes** to creating the issue and
 > **"Yes, and approve `gh issue` or `git config` for the rest of the running session"**.
 

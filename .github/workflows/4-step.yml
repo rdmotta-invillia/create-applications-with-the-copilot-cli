@@ -1,4 +1,4 @@
-name: Step 4 # Last step of the exercise
+name: Passo 4 # Último passo do exercício
 
 on:
   workflow_dispatch:
@@ -18,11 +18,11 @@ env:
 
 jobs:
   find_exercise:
-    name: Find Exercise Issue
+    name: Encontrar Issue do Exercício
     uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.8.1
 
   check_step_work:
-    name: Check step work
+    name: Verificar trabalho do passo
     runs-on: ubuntu-latest
     needs: [find_exercise]
     env:
@@ -30,17 +30,17 @@ jobs:
       ISSUE_NUMBER: ${{ needs.find_exercise.outputs.issue-number }}
 
     steps:
-      - name: Checkout
+      - name: Checkout do código
         uses: actions/checkout@v5
 
-      - name: Get response templates
+      - name: Obter templates de resposta
         uses: actions/checkout@v5
         with:
           repository: skills/exercise-toolkit
           path: exercise-toolkit
           ref: v0.8.1
 
-      - name: Find last comment
+      - name: Encontrar último comentário
         id: find-last-comment
         uses: peter-evans/find-comment@v3
         with:
@@ -48,7 +48,7 @@ jobs:
           issue-number: ${{ env.ISSUE_NUMBER }}
           direction: last
 
-      - name: Update comment - checking work
+      - name: Atualizar comentário - verificando trabalho
         uses: GrantBirki/comment@v2.1.1
         with:
           repository: ${{ env.ISSUE_REPOSITORY }}
@@ -57,23 +57,23 @@ jobs:
           file: exercise-toolkit/markdown-templates/step-feedback/checking-work.md
           edit-mode: replace
 
-      - name: Check if at least 3 issues exist
+      - name: Verificar se existem pelo menos 3 issues
         id: check-issue-count
         continue-on-error: true
         run: |
           ISSUE_COUNT=$(gh issue list --repo ${{ github.repository }} --state all --json number --jq 'length')
-          echo "Found $ISSUE_COUNT issues"
+          echo "Encontradas $ISSUE_COUNT issues"
           if [ "$ISSUE_COUNT" -ge 3 ]; then
-            echo "At least 3 issues exist"
+            echo "Existem pelo menos 3 issues"
             exit 0
           else
-            echo "Less than 3 issues exist"
+            echo "Existem menos de 3 issues"
             exit 1
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update comment - step results
+      - name: Atualizar comentário - resultados do passo
         uses: GrantBirki/comment@v2.1.1
         with:
           repository: ${{ env.ISSUE_REPOSITORY }}
@@ -84,15 +84,15 @@ jobs:
           vars: |
             step_number: 4
             results_table:
-              - description: "At least 3 issues exist in repository"
+              - description: "Existem pelo menos 3 issues no repositório"
                 passed: ${{ steps.check-issue-count.outcome == 'success' }}
 
-      - name: Fail job if not all checks passed
+      - name: Falhar job se nem todas as verificações passaram
         if: contains(steps.*.outcome, 'failure')
         run: exit 1
 
   post_review_content:
-    name: Post review content
+    name: Publicar conteúdo da revisão
     needs: [find_exercise, check_step_work]
     runs-on: ubuntu-latest
     env:
@@ -100,39 +100,39 @@ jobs:
       ISSUE_NUMBER: ${{ needs.find_exercise.outputs.issue-number }}
 
     steps:
-      - name: Checkout
+      - name: Checkout do código
         uses: actions/checkout@v5
 
-      - name: Get response templates
+      - name: Obter templates de resposta
         uses: actions/checkout@v5
         with:
           repository: skills/exercise-toolkit
           path: exercise-toolkit
           ref: v0.8.1
 
-      - name: Create comment - step finished - final review next
+      - name: Criar comentário - passo concluído - revisão final a seguir
         uses: GrantBirki/comment@v2.1.1
         with:
           repository: ${{ env.ISSUE_REPOSITORY }}
           issue-number: ${{ env.ISSUE_NUMBER }}
           file: exercise-toolkit/markdown-templates/step-feedback/lesson-review.md
 
-      - name: Create comment - add review content
+      - name: Criar comentário - adicionar conteúdo da revisão
         uses: GrantBirki/comment@v2.1.1
         with:
           repository: ${{ env.ISSUE_REPOSITORY }}
           issue-number: ${{ env.ISSUE_NUMBER }}
           file: ${{ env.REVIEW_FILE }}
 
-      - name: Disable current workflow
+      - name: Desabilitar workflow atual
         run: gh workflow disable "${{github.workflow}}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   finish_exercise:
-    name: Finish Exercise
+    name: Finalizar Exercício
     needs: [find_exercise, post_review_content]
     uses: skills/exercise-toolkit/.github/workflows/finish-exercise.yml@v0.8.1
     with:
       issue-url: ${{ needs.find_exercise.outputs.issue-url }}
-      exercise-title: "Create applications with the Copilot CLI"
+      exercise-title: "Crie aplicações com o Copilot CLI"

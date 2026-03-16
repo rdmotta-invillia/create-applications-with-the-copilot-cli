@@ -1,39 +1,39 @@
-## Review
+## Revisão
 
-_Congratulations, you've completed this exercise and learned a lot about the standalone GitHub Copilot CLI!_
+_Parabéns, você concluiu este exercício e aprendeu muito sobre o GitHub Copilot CLI standalone!_
 
 <img src="https://octodex.github.com/images/jetpacktocat.png" alt="celebrate" width=200 align=right>
 
-Here's a recap of your accomplishments:
+Aqui está um resumo das suas conquistas:
 
-- ✅ Install the Copilot CLI and Use the issue template to create an issue
-- ✅ Generate a Node.js CLI calculator app
-- ✅ Expand calculator functionality
-- ✅ Write unit tests for calculator functions
-- ✅ Create, Review, and Merge your Pull Request
+- ✅ Instalar o Copilot CLI e usar o issue template para criar uma issue
+- ✅ Gerar uma aplicação calculadora CLI em Node.js
+- ✅ Expandir a funcionalidade da calculadora
+- ✅ Escrever testes unitários para as funções da calculadora
+- ✅ Criar, revisar e fazer merge do seu Pull Request
 
-### Explore More Copilot CLI Features
+### Explore Mais Recursos do Copilot CLI
 
-Now that you've learned the basics, explore these additional capabilities:
+Agora que você aprendeu o básico, explore estas capacidades adicionais:
 
-**Core Features:**
+**Recursos Principais:**
 
-- **Latest AI models**: Access cutting-edge models from OpenAI and Google using `/model` command
-- **Image support**: Paste or drag-and-drop images for visual context in your queries
-- **`/share` command**: Save your chat sessions as Markdown files or GitHub gists
-- **Headless mode (`-p`)**: Use Copilot CLI in automation scripts and CI/CD pipelines
-- **MCP server support**: Integrate with Model Context Protocol tools for extended functionality
+- **Modelos de IA mais recentes**: Acesse modelos de ponta da OpenAI e Google usando o comando `/model`
+- **Suporte a imagens**: Cole ou arraste e solte imagens para contexto visual nas suas consultas
+- **Comando `/share`**: Salve suas sessões de chat como arquivos Markdown ou GitHub gists
+- **Modo headless (`-p`)**: Use o Copilot CLI em scripts de automação e pipelines CI/CD
+- **Suporte a MCP server**: Integre com ferramentas do Model Context Protocol para funcionalidade estendida
 
-**Advanced Features:**
+**Recursos Avançados:**
 
-- **Custom agents**: Create specialized agent personas in `.github/agents/` for domain-specific workflows
-- **`/delegate` command**: Assign tasks to Copilot coding agent for autonomous work
-- **MCP server support**: Integrate with Model Context Protocol tools for extended functionality
+- **Custom agents**: Crie personas de agentes especializados em `.github/agents/` para fluxos de trabalho específicos de domínio
+- **Comando `/delegate`**: Atribua tarefas ao Copilot coding agent para trabalho autônomo
+- **Suporte a MCP server**: Integre com ferramentas do Model Context Protocol para funcionalidade estendida
 
-### What's next?
+### Próximos passos
 
-- [GitHub Copilot Documentation](https://docs.github.com/en/copilot) - Learn more about all Copilot features
-- [Using the Copilot CLI](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli) - Official Copilot CLI guide
-- [Copilot CLI 101](https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/) - Comprehensive tutorial
-- [More GitHub Skills](https://learn.github.com/skills) - Continue learning with other exercises
-- Try using Copilot CLI in your own projects to boost productivity!
+- [GitHub Copilot Documentation](https://docs.github.com/en/copilot) - Saiba mais sobre todos os recursos do Copilot
+- [Using the Copilot CLI](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli) - Guia oficial do Copilot CLI
+- [Copilot CLI 101](https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/) - Tutorial abrangente
+- [More GitHub Skills](https://learn.github.com/skills) - Continue aprendendo com outros exercícios
+- Experimente usar o Copilot CLI nos seus próprios projetos para aumentar a produtividade!

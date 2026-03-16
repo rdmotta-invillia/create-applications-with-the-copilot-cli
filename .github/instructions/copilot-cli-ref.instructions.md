@@ -2,67 +2,67 @@
 applyTo: "**/**"
 ---
 
-# Prompt guidance
+# Orientações de prompt
 
-Stick to the prompts and context being provided. Don't jump ahead to doing steps.
-Only add, commit, and push files when prompted by the user.
+Mantenha-se nos prompts e contexto fornecidos. Não avance para fazer passos futuros.
+Apenas adicione, faça commit e push de arquivos quando solicitado pelo usuário.
 
-# New features
+# Novos recursos
 
-Use .github/ISSUE_TEMPLATE/feature_request.md to request all new features for calculator.js.
+Use .github/ISSUE_TEMPLATE/feature_request.md para solicitar todos os novos recursos para calculator.js.
 
-# Global shortcuts
-
-```
-@             mention files, include contents in context
-Esc           cancel the current operation
-!             execute command in your local shell (bypass Copilot)
-ctrl+c        cancel operation / clear input / exit
-ctrl+d        shutdown
-ctrl+l        clear the screen
-```
-
-## Expand timeline content shortcuts
+# Atalhos globais
 
 ```
-Ctrl+o - expand all timeline/collapse timeline
-Ctrl+r - expand recent timeline/collapse timeline
+@             mencionar arquivos, incluir conteúdo no contexto
+Esc           cancelar a operação atual
+!             executar comando no seu shell local (ignorar o Copilot)
+ctrl+c        cancelar operação / limpar entrada / sair
+ctrl+d        encerrar
+ctrl+l        limpar a tela
 ```
 
-## Motion shortcuts
+## Atalhos para expandir conteúdo da timeline
 
 ```
-Ctrl+a - move to the beginning of the line
-Ctrl+e - move to the end of the line
-Ctrl+h - delete previous character
-Ctrl+w - delete previous word
-Ctrl+u - delete from cursor to beginning of line
-Ctrl+k - delete from cursor to end of line
-Meta+←/→ - move cursor by word
+Ctrl+o - expandir toda timeline/recolher timeline
+Ctrl+r - expandir timeline recente/recolher timeline
 ```
 
-Use ↑↓ keys to navigate command history
+## Atalhos de movimentação
 
-## Instruction sources
+```
+Ctrl+a - mover para o início da linha
+Ctrl+e - mover para o fim da linha
+Ctrl+h - deletar caractere anterior
+Ctrl+w - deletar palavra anterior
+Ctrl+u - deletar do cursor até o início da linha
+Ctrl+k - deletar do cursor até o fim da linha
+Meta+←/→ - mover cursor por palavra
+```
 
-Respects instructions sourced from various locations:
+Use as teclas ↑↓ para navegar no histórico de comandos
 
-- `.github/instructions/**/*.instructions.md` (in git root and cwd)
+## Fontes de instruções
+
+Respeita instruções vindas de diversas localizações:
+
+- `.github/instructions/**/*.instructions.md` (na raiz do git e cwd)
 - `.github/copilot-instructions.md`
-- `AGENTS.md` (in git root and cwd)
+- `AGENTS.md` (na raiz do git e cwd)
 - `CLAUDE.md`
 - `GEMINI.md`
 - `$HOME/.copilot/copilot-instructions.md`
-- Additional directories via `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`
+- Diretórios adicionais via `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`
 
-## Learn more
+## Saiba mais
 
-To learn about what I can do:
+Para saber o que eu posso fazer:
 
-- Ask me "What can you do?"
-- Or visit: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli
+- Me pergunte "What can you do?"
+- Ou visite: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli
 
-## Available commands
+## Comandos disponíveis
 
 ```
 /add-dir <directory> - Add a directory to the allowed list for file access
