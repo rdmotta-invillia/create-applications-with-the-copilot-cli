@@ -63,7 +63,7 @@ Quando você tem tarefas maiores, pode delegá-las ao Copilot coding agent:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Create and push a new branch called 'create-calc-app'
+   > Crie e faça push de uma nova branch chamada 'create-calc-app'
    > ```
 
 <details>
@@ -89,11 +89,11 @@ Use o comando `!` no Copilot CLI para executar comandos shell diretamente da sua
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > @images/js-calculator.png help me create a Node.js CLI calculator app 
-   > based only on the four basic math operations in this image and outlined
-   > in the latest issue in this owner/repository.
-   > Create the code and put it in the 'src' directory.
-   > Make sure the calculator is commented with the operations it supports.
+   > @images/js-calculator.png me ajude a criar uma aplicação calculadora CLI em Node.js 
+   > baseada apenas nas quatro operações matemáticas básicas nesta imagem e descritas
+   > na issue mais recente neste owner/repository.
+   > Crie o código e coloque-o no diretório 'src'.
+   > Certifique-se de que a calculadora esteja comentada com as operações que ela suporta.
    > ```
 
    1. Opcionalmente, use o modo headless com um prompt:
@@ -101,11 +101,11 @@ Use o comando `!` no Copilot CLI para executar comandos shell diretamente da sua
       > ![Static Badge](https://img.shields.io/badge/Terminal-text?logo=gnometerminal&labelColor=0969da&color=ddf4ff)
       >
       > ```bash
-      > copilot -p "@images/js-calculator.png help me create a Node.js CLI calculator app 
-      > based only on the four basic math operations in this image and outlined
-      > in the latest issue in this owner/repository.
-      > Create the code and put it in the 'src' directory.
-      > Make sure the calculator is commented with the operations it supports."
+      > copilot -p "@images/js-calculator.png me ajude a criar uma aplicação calculadora CLI em Node.js 
+      > baseada apenas nas quatro operações matemáticas básicas nesta imagem e descritas
+      > na issue mais recente neste owner/repository.
+      > Crie o código e coloque-o no diretório 'src'.
+      > Certifique-se de que a calculadora esteja comentada com as operações que ela suporta."
       > ```
 
 > [!NOTE]
@@ -116,8 +116,8 @@ Use o comando `!` no Copilot CLI para executar comandos shell diretamente da sua
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Run and test the calculator functions with some example operations 
-   > shown in the image @images/calc-basic-operations.png.
+   > Execute e teste as funções da calculadora com alguns exemplos de operações 
+   > mostrados na imagem @images/calc-basic-operations.png.
    > ```
 
 3. Peça ao Copilot CLI para criar testes abrangentes para as funções da calculadora:
@@ -125,14 +125,14 @@ Use o comando `!` no Copilot CLI para executar comandos shell diretamente da sua
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Create comprehensive unit tests for all the calculator functions:
-   > - Expand tests based on the following example:
+   > Crie testes unitários abrangentes para todas as funções da calculadora:
+   > - Expanda os testes com base no seguinte exemplo:
    >   - @images/calc-basic-operations.png
-   > - Add these tests to a src/tests/calculator.test.js file
-   > - Use a popular Node.js testing framework if one isn't installed
-   > - addition, subtraction, multiplication, and division
-   > - test edge cases like division by zero
-   > - Make sure all tests run and pass
+   > - Adicione esses testes em um arquivo src/tests/calculator.test.js
+   > - Use um framework de testes Node.js popular se nenhum estiver instalado
+   > - addition, subtraction, multiplication e division
+   > - teste edge cases como division by zero
+   > - Certifique-se de que todos os testes executem e passem
    > ```
 
 > [!NOTE]
@@ -143,10 +143,10 @@ Use o comando `!` no Copilot CLI para executar comandos shell diretamente da sua
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Add all calculator and test files to git.
-   > Commit with message "Implement basic calculator operations and tests: 
+   > Adicione todos os arquivos da calculadora e de testes ao git.
+   > Faça commit com a mensagem "Implement basic calculator operations and tests: 
    > addition, subtraction, multiplication, division"
-   > Push the changes
+   > Faça push das alterações
    > ```
 
 5. Aguarde um momento para Mona verificar seu trabalho, fornecer feedback e compartilhar a próxima lição.

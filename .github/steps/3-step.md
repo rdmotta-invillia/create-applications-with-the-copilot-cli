@@ -72,14 +72,14 @@ O Copilot coding agent irá:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Create a GitHub issue for a Node.js CLI calculator app using the feature_request.md template 
-   > as the markdown format.
-   > I want to request a feature to add more operations including 
+   > Crie uma GitHub issue para uma aplicação calculadora CLI em Node.js usando o template feature_request.md 
+   > como formato markdown.
+   > Eu quero solicitar um recurso para adicionar mais operações incluindo 
    > - modulo
    > - exponentiation (power)
    > - square root
-   > Create the issue directly for the current owner and repository in this session on github.com using the `gh` CLI commands.
-   > List the issue link when complete
+   > Crie a issue diretamente para o owner e repositório atual nesta sessão no github.com usando os comandos `gh` CLI.
+   > Liste o link da issue quando estiver completo
    > ```
 
 1. Trabalhe com o Copilot CLI para implementar as novas operações:
@@ -87,10 +87,10 @@ O Copilot coding agent irá:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Add these functions to my existing calculator.js based on latest issue created:
-   > 1. modulo(a, b) - returns the remainder of a divided by b
-   > 2. power(base, exponent) - returns base raised to the exponent
-   > 3. squareRoot(n) - returns the square root of n with error handling for negative numbers
+   > Adicione estas funções ao meu calculator.js existente com base na última issue criada:
+   > 1. modulo(a, b) - retorna o resto da divisão de a por b
+   > 2. power(base, exponent) - retorna base elevada ao exponent
+   > 3. squareRoot(n) - retorna a raiz quadrada de n com tratamento de erro para números negativos
    > ```
 
    1. Opcionalmente, use o modo headless:
@@ -98,10 +98,10 @@ O Copilot coding agent irá:
       > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
       >
       > ```prompt
-      > copilot -p "Add these functions to my existing calculator.js based on latest issue created:
-      > 1. modulo(a, b) - returns the remainder of a divided by b
-      > 2. power(base, exponent) - returns base raised to the exponent
-      > 3. squareRoot(n) - returns the square root of n with error handling for negative numbers"
+      > copilot -p "Adicione estas funções ao meu calculator.js existente com base na última issue criada:
+      > 1. modulo(a, b) - retorna o resto da divisão de a por b
+      > 2. power(base, exponent) - retorna base elevada ao exponent
+      > 3. squareRoot(n) - retorna a raiz quadrada de n com tratamento de erro para números negativos"
       > ```
 
 1. Teste suas novas funções e adicione testes:
@@ -109,13 +109,13 @@ O Copilot coding agent irá:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Add tests for the new calculator operations: 
-   > - Expand tests based on the following example:
+   > Adicione testes para as novas operações da calculadora: 
+   > - Expanda os testes com base no seguinte exemplo:
    >   - @images/calc-extended-operations.png
-   > - Add new tests for the new operations to the existing src/tests/calculator.test.js file
-   > - Use a popular Node.js testing framework if one isn't installed
-   > - Make sure to include edge case tests like square root of negative numbers
-   > - Make sure all tests run and pass
+   > - Adicione novos testes para as novas operações no arquivo existente src/tests/calculator.test.js
+   > - Use um framework de testes Node.js popular se nenhum estiver instalado
+   > - Certifique-se de incluir testes de edge cases como square root de números negativos
+   > - Certifique-se de que todos os testes executem e passem
    > ```
 
 1. Faça commit das suas alterações:
@@ -123,10 +123,10 @@ O Copilot coding agent irá:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Add all calculator and test files to git.
-   > Commit with message "Implemented additional calculator operations and tests: 
+   > Adicione todos os arquivos da calculadora e de testes ao git.
+   > Faça commit com a mensagem "Implemented additional calculator operations and tests: 
    > modulo, power, square root" 
-   > Push the changes
+   > Faça push das alterações
    > ```
 
 1. Aguarde um momento para Mona verificar seu trabalho, fornecer feedback e compartilhar a próxima lição.

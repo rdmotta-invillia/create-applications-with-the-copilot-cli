@@ -179,19 +179,19 @@ Issue templates ajudam a manter a consistência quando membros da equipe criam i
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Create a GitHub issue for a Node.js CLI calculator app using the following template
-   > .github/ISSUE_TEMPLATE/feature_request.md template and make sure the issue is in a
-   > markdown format that contains "calculator" in the title and follows the format of
-   > the issue template.
-   > I want to request a feature for basic arithmetic operations including
+   > Crie uma GitHub issue para uma aplicação calculadora CLI em Node.js usando o seguinte template
+   > .github/ISSUE_TEMPLATE/feature_request.md e certifique-se de que a issue esteja em
+   > formato markdown contendo "calculator" no título e seguindo o formato do
+   > issue template.
+   > Eu quero solicitar um recurso para operações aritméticas básicas incluindo
    > - addition
    > - subtraction
    > - multiplication
    > - division
-   > The calculator should be implemented in calculator.js
-   > Create the issue directly in the current owner in this session
-   > and repository on github.com using the `gh` CLI commands.
-   > List the issue link when complete
+   > A calculadora deve ser implementada em calculator.js
+   > Crie a issue diretamente no owner atual nesta sessão
+   > e repositório no github.com usando os comandos `gh` CLI.
+   > Liste o link da issue quando estiver completo
    > ```
 
 5. Mona já deve estar verificando seu trabalho. Dê um momento a ela e fique de olho nos comentários. Você verá ela responder com informações de progresso e a próxima lição.

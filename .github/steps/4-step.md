@@ -63,11 +63,11 @@ O Copilot CLI permite que você:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Create a pull request from the current branch with a title "Add calculator enhancements" 
-   > and description that includes the main changes: basic calculator operations and expanded 
-   > functionality with modulo, power, and square root. Make sure to add @copilot as a reviewer 
-   > and request a review on the PR.
-   > List the PR link when it is completely created
+   > Crie um pull request a partir da branch atual com o título "Add calculator enhancements" 
+   > e descrição que inclua as principais alterações: operações básicas da calculadora e funcionalidade 
+   > expandida com modulo, power e square root. Certifique-se de adicionar @copilot como reviewer 
+   > e solicitar uma review no PR.
+   > Liste o link do PR quando estiver completamente criado
    > ```
 
 3. Vincule o pull request a ambas as issues que você criou anteriormente:
@@ -75,8 +75,8 @@ O Copilot CLI permite que você:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Link the pull request I just created to both the "Create a calculator" and 
-   > "Add more operations" issues so they close automatically when merged.
+   > Vincule o pull request que acabei de criar a ambas as issues "Create a calculator" e 
+   > "Add more operations" para que sejam fechadas automaticamente quando o merge for feito.
    > ```
 
 1. Faça merge do pull request após a revisão do Copilot estar completa:
@@ -84,7 +84,7 @@ O Copilot CLI permite que você:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Merge the pull request and close the attached issues
+   > Faça merge do pull request e feche as issues vinculadas
    > ```
 
 > [!NOTE]
@@ -97,8 +97,8 @@ O Copilot CLI permite que você:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > List the closed issues in the repository to confirm both the "Create a calculator" 
-   > and "Add more operations" issues are now closed.
+   > Liste as issues fechadas no repositório para confirmar que ambas as issues "Create a calculator" 
+   > e "Add more operations" estão agora fechadas.
    > ```
 
 5. Aguarde um momento para Mona verificar seu trabalho, fornecer feedback e compartilhar a próxima lição.
