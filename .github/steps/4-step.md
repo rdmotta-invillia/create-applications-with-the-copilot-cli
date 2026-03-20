@@ -1,6 +1,6 @@
 ## Passo 4: Criar, Revisar e Fazer Merge do Seu Pull Request
 
-Joãozinho está pronto para finalizar o trabalho de desenvolvimento criando um pull request, vinculando-o a ambas as issues, obtendo uma revisão do Copilot e fazendo merge das alterações — tudo pela linha de comando com o Copilot CLI.
+Joãozinho está pronto para finalizar o trabalho de desenvolvimento criando um pull request, vinculando-o a ambas as issues, obtendo uma revisão do Copilot e fazendo o merge das alterações, tudo pela linha de comando com o Copilot CLI.
 
 ### 📖 Teoria: Pull Requests e Code Review com o Copilot CLI
 
@@ -8,7 +8,7 @@ Joãozinho está pronto para finalizar o trabalho de desenvolvimento criando um 
 
 Pull requests são a forma padrão de propor alterações no desenvolvimento colaborativo:
 
-- Permitem que membros da equipe revisem o código antes do merge
+- Permitem que os membros da equipe revisem o código antes do merge
 - Mantêm um histórico de alterações e decisões
 - Podem ser vinculados a issues para melhor acompanhamento do projeto
 - Habilitam testes automatizados e validação através de CI/CD
@@ -17,7 +17,7 @@ Pull requests são a forma padrão de propor alterações no desenvolvimento col
 
 Vincular pull requests a issues ajuda no gerenciamento do projeto:
 
-- Fecha issues automaticamente quando o PR é mergeado
+- Fecha issues automaticamente quando o PR recebe merge
 - Fornece rastreabilidade entre itens de trabalho e alterações de código
 - Ajuda a acompanhar o progresso ao longo do ciclo de desenvolvimento
 - Melhora a comunicação da equipe sobre o que está sendo construído
@@ -34,7 +34,7 @@ O GitHub Copilot pode atuar como revisor para:
 O Copilot CLI permite que você:
 
 - Crie pull requests diretamente do terminal
-- Solicite revisões do Copilot ou membros da equipe
+- Solicite revisões do Copilot ou de membros da equipe
 - Faça merge de alterações sem sair do CLI
 - Automatize todo o fluxo de trabalho para iteração mais rápida
 
@@ -45,8 +45,7 @@ O Copilot CLI permite que você:
 - [GitHub Copilot as a Code Reviewer](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review)
 
 > [!IMPORTANT]
-> Se você reiniciou seu codespace, pode ser necessário executar `copilot --allow-all` e depois autenticar com o GitHub novamente executando `!gh auth login` no seu terminal,
-> ou usar `!gh auth login` de dentro da sessão do Copilot CLI.
+> Se você reiniciou seu codespace, pode ser necessário executar `copilot --allow-all` e, em seguida, autenticar-se novamente com o GitHub executando `!gh auth login` no seu terminal ou de dentro da sessão do Copilot CLI.
 
 ### ⌨️ Atividade: Completar Seu Fluxo de Trabalho de Pull Request
 
@@ -63,11 +62,11 @@ O Copilot CLI permite que você:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Crie um pull request a partir da branch atual com o título "Add calculator enhancements" 
-   > e descrição que inclua as principais alterações: operações básicas da calculadora e funcionalidade 
-   > expandida com modulo, power e square root. Certifique-se de adicionar @copilot como reviewer 
+   > Crie um pull request a partir da branch atual com o título "Add calculator enhancements"
+   > e uma descrição que inclua as principais alterações: operações básicas da calculadora e funcionalidade
+   > expandida com modulo, power e square root. Certifique-se de adicionar @copilot como reviewer
    > e solicitar uma review no PR.
-   > Liste o link do PR quando estiver completamente criado
+   > Liste o link do PR quando ele estiver pronto
    > ```
 
 3. Vincule o pull request a ambas as issues que você criou anteriormente:
@@ -75,7 +74,7 @@ O Copilot CLI permite que você:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Vincule o pull request que acabei de criar a ambas as issues "Create a calculator" e 
+   > Vincule o pull request que acabei de criar a ambas as issues "Create a calculator" e
    > "Add more operations" para que sejam fechadas automaticamente quando o merge for feito.
    > ```
 
@@ -97,7 +96,7 @@ O Copilot CLI permite que você:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Liste as issues fechadas no repositório para confirmar que ambas as issues "Create a calculator" 
+   > Liste as issues fechadas no repositório para confirmar que ambas as issues "Create a calculator"
    > e "Add more operations" estão agora fechadas.
    > ```
 
@@ -117,6 +116,6 @@ O Copilot CLI permite que você:
 - Você pode ver os detalhes do PR com `!gh pr view` ou `!gh pr list` para ver seus PRs
 - Para issues que não fecham automaticamente, vincule-as manualmente na interface web do GitHub
 - Lembre-se de verificar se a revisão do Copilot foi enviada antes de fazer o merge
-- Use `!gh pr merge --squash` para fazer merge com um histórico limpo
+- Use `!gh pr merge --squash` para fazer o merge com um histórico limpo
 
 </details>

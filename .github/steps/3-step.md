@@ -1,6 +1,6 @@
 ## Passo 3: Expandir a Funcionalidade da Calculadora
 
-Joãozinho quer expandir a calculadora com operações adicionais criando uma nova issue e trabalhando com o Copilot CLI para implementar as melhorias.
+Joãozinho quer expandir a calculadora com operações adicionais, criando uma nova issue e trabalhando com o Copilot CLI para implementar essas melhorias.
 
 ### 📖 Teoria: Desenvolvimento Iterativo com o Copilot CLI
 
@@ -11,13 +11,13 @@ O Copilot CLI standalone ajuda a manter o ritmo de desenvolvimento ao:
 - Gerar código rapidamente para novos recursos usando os modelos de IA mais recentes
 - Sugerir melhores práticas e padrões
 - Ajudar a depurar e testar novas funcionalidades
-- Reduzir a troca de contexto mantendo você no terminal
+- Reduzir a troca de contexto, mantendo você no terminal
 - Lidar com comandos shell de longa duração de forma mais eficiente
 - Suportar automação aprimorada com o modo headless `-p`
 
 #### Delegando Tarefas Maiores
 
-Para tarefas mais complexas, você pode usar o comando `/delegate` exemplificado abaixo para atribuir trabalho ao Copilot coding agent:
+Para tarefas mais complexas, você pode usar o comando `/delegate`, como exemplificado abaixo, para atribuir trabalho ao Copilot coding agent:
 
 > ```bash
 > copilot
@@ -36,7 +36,7 @@ O Copilot coding agent irá:
 5. Solicitar sua revisão quando estiver completo
 
 > [!NOTE]
-> Usar o comando `/delegate` para utilizar o Copilot Coding Agent (CCA) consumirá premium requests da sua assinatura do GitHub Copilot. O Copilot CLI também pode ser usado com modelos regulares, que não consomem premium requests.
+> Usar o comando `/delegate` com o Copilot Coding Agent (CCA) consumirá premium requests da sua assinatura do GitHub Copilot. O Copilot CLI também pode ser usado com modelos regulares, que não consomem premium requests.
 
 #### Fluxos de Trabalho de Teste e Melhoria
 
@@ -49,12 +49,12 @@ O Copilot coding agent irá:
 - Salvar e compartilhar suas sessões de desenvolvimento usando `/share`
 
 > [!IMPORTANT]
-> Se você reiniciou seu codespace, pode ser necessário executar `copilot --allow-all --enable-all-github-mcp-tools` e depois autenticar com o GitHub novamente executando `!gh auth login` de dentro da sessão do Copilot CLI.
+> Se você reiniciou seu codespace, pode ser necessário executar `copilot --allow-all --enable-all-github-mcp-tools` e, em seguida, autenticar-se novamente com o GitHub executando `!gh auth login` de dentro da sessão do Copilot CLI.
 
 > [!NOTE]
 > A opção `--allow-all` no Copilot CLI habilita todas as permissões de uma vez:
 > é equivalente a `--allow-all-tools`, `--allow-all-paths` e `--allow-all-urls`.
-> Isso permite que o CLI acesse qualquer caminho de arquivo, use qualquer ferramenta e acesse qualquer URL sem pedir confirmação.
+> Isso permite que o CLI acesse qualquer caminho de arquivo, use qualquer ferramenta e acesse qualquer URL sem solicitar confirmação.
 > Use com cautela, pois concede ao CLI acesso total e capacidades de automação.
 
 ### ⌨️ Atividade: Adicionar Mais Operações à Calculadora
@@ -72,14 +72,14 @@ O Copilot coding agent irá:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Crie uma GitHub issue para uma aplicação calculadora CLI em Node.js usando o template feature_request.md 
-   > como formato markdown.
-   > Eu quero solicitar um recurso para adicionar mais operações incluindo 
+   > Crie uma GitHub issue para uma aplicação de calculadora CLI em Node.js usando o template feature_request.md
+   > em formato markdown.
+   > Eu quero solicitar um recurso para adicionar mais operações, incluindo
    > - modulo
    > - exponentiation (power)
    > - square root
    > Crie a issue diretamente para o owner e repositório atual nesta sessão no github.com usando os comandos `gh` CLI.
-   > Liste o link da issue quando estiver completo
+   > Liste o link da issue quando ela estiver pronta
    > ```
 
 1. Trabalhe com o Copilot CLI para implementar as novas operações:
@@ -89,7 +89,7 @@ O Copilot coding agent irá:
    > ```prompt
    > Adicione estas funções ao meu calculator.js existente com base na última issue criada:
    > 1. modulo(a, b) - retorna o resto da divisão de a por b
-   > 2. power(base, exponent) - retorna base elevada ao exponent
+   > 2. power(base, exponent) - retorna a base elevada a exponent
    > 3. squareRoot(n) - retorna a raiz quadrada de n com tratamento de erro para números negativos
    > ```
 
@@ -100,7 +100,7 @@ O Copilot coding agent irá:
       > ```prompt
       > copilot -p "Adicione estas funções ao meu calculator.js existente com base na última issue criada:
       > 1. modulo(a, b) - retorna o resto da divisão de a por b
-      > 2. power(base, exponent) - retorna base elevada ao exponent
+      > 2. power(base, exponent) - retorna a base elevada a exponent
       > 3. squareRoot(n) - retorna a raiz quadrada de n com tratamento de erro para números negativos"
       > ```
 
@@ -109,7 +109,7 @@ O Copilot coding agent irá:
    > ![Static Badge](https://img.shields.io/badge/CLI-Prompt-text?style=flat-square&logo=github-copilot&labelColor=8250df&color=fbefff)
    >
    > ```prompt
-   > Adicione testes para as novas operações da calculadora: 
+   > Adicione testes para as novas operações da calculadora:
    > - Expanda os testes com base no seguinte exemplo:
    >   - @images/calc-extended-operations.png
    > - Adicione novos testes para as novas operações no arquivo existente src/tests/calculator.test.js
@@ -138,7 +138,7 @@ O Copilot coding agent irá:
 <summary>Está com problemas? 🤷</summary><br/>
 
 - Certifique-se de que o título da sua issue inclui "Calculator" ou "Operations"
-- O arquivo calculator.js deve exportar funções que possam ser requeridas/importadas
+- O arquivo calculator.js deve exportar funções que possam ser importadas
 - Você pode testar operações manualmente usando o Node.js REPL: `node` e depois digite seu código
 - Para raiz quadrada de números negativos, considere retornar `NaN` ou lançar um erro
 - Lembre-se de fazer commit e push de quaisquer alterações de código que você fizer

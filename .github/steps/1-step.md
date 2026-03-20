@@ -198,7 +198,7 @@ Issue templates ajudam a manter a consistência quando membros da equipe criam i
 
 > [!NOTE]
 > O Copilot CLI pode pedir para confirmar a criação da issue e o uso de `gh issue` e `git config`.
-> Respond **yes** to creating the issue and
+> Responda **yes** para criar a issue e
 > **"Yes, and approve `gh issue` or `git config` for the rest of the running session"**.
 
 <img width="60%" height="60%" alt="CopilotCLIPerms" src="../images/copilot-cli-permissions.png" />
